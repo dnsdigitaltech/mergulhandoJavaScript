@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*const age = 21
+        //const age = 25 //dar erro pois não pode ser redeclarada*/
+        const me = {
+            name: 'Davi',
+            age: 37
+        }
+
+        //dar erro
+        /*me = {
+            name: 'Davi',
+            age: 36
+        }*/
+
+        //pode alterar os valores das propriedades
+        me.age = 36
+
+        const list = ['laranja', 'beterraba']
+        list.push('morango')
+
+        const age2 = 38
+
+        if(age2 > 18) {
+            const pastYears = age2 - 18
+            console.log(pastYears)
+        }
+    </script>
+</body>
+</html>
