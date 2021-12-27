@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person = {
+            name: 'Davi',
+            age: 37
+        }
+
+        function introduce ({name, age}){
+            console.log(`Oi! Meu nome é ${name} e eu tenho ${age} anos `)
+        }
+
+        const fruits = ['banana', 'morango', 'manga']
+       /* //recupear um array
+        const firstFruit = fruits[0]
+        const secondFruit = fruits[1]*/
+        
+        //com a desestruturação
+        const [firstFruit, secondFruit] = fruits
+
+
+    </script>
+</body>
+</html>
