@@ -8,27 +8,18 @@
 </head>
 <body>
     <script>
-        //classe pai
-        class Animal {
-            sex
-
-            constructor(props){
-                this.sex = props.sex
-            }
-        }
-        //herança
-        class Human extends Animal{
+        class Human {
             hungry = true
             name
             age
             sex
 
             constructor(props){
-                super(props)//força a execução do item sex da class pai
                 if(!props.name)
                     throw Error('Nome é obrigatório')
                 this.name = props.name
                 this.age = props.age
+                this.sex = props.sex
             }
 
             eat () {
