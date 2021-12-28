@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise.all</title>
+</head>
+<body>
+    <script>
+        const baseUrl = 'http://jsonplaceholder.typicode.com'
+
+        //sem Promise.all
+       /* async function getTodos(){
+            const firstTodo = 
+                await fetch(`${baseUrl}/todos/1`).then(res => res.json())
+
+            const secondTodo = 
+                await fetch(`${baseUrl}/todos/2`).then(res => res.json())
+
+            const thirdTodo = 
+                await fetch(`${baseUrl}/todos/3`).then(res => res.json())
+
+            return [firstTodo, secondTodo, thirdTodo]
+        }*/
+
+        //com Promise.all
+        async function getTodos(){
+            const promises = Promise.all([
+               fetch(`${baseUrl}/todos/1`).then(res => res.json()),
+               fetch(`${baseUrl}/todos/2`).then(res => res.json()),
+               fetch(`${baseUrl}/todos/3`).then(res => res.json()),
+               fetch(`${baseUrl}/todos/4`).then(res => res.json()),
+               fetch(`${baseUrl}/todos/5`).then(res => res.json()),
+               fetch(`${baseUrl}/todos/6`).then(res => res.json()),
+               fetch(`${baseUrl}/todos/7`).then(res => res.json())
+            ])
+            
+            return promises
+
+        }
+
+        const todos = getTodos();
+    </script>
+</body>
+</html>
